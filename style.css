@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #1a1a2e;
-    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0a0a1a;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -12,8 +14,9 @@ body {
     top: 0;
     width: 100%;
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(10, 10, 26, 0.5);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,8 +26,9 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #00ffff;
     text-decoration: none;
+    text-shadow: 0 0 10px #00ffff;
 }
 
 .glass-nav ul {
@@ -34,50 +38,76 @@ body {
 }
 
 .glass-nav ul li a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 5px;
 }
 
 .glass-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    background: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
 }
 
 .hero-section {
     height: 100vh;
-    background: linear-gradient(135deg, #ff00cc, #333399);
+    background: linear-gradient(135deg, #0a0a1a, #1a1a3a);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content .gradient-text {
     font-size: 4rem;
-    background: -webkit-linear-gradient(#eee, #333);
+    font-weight: 700;
+    background: -webkit-linear-gradient(45deg, #00ffff, #ff00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
     margin-top: 1rem;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: transparent;
+    color: #00ffff;
     text-decoration: none;
+    border: 2px solid #00ffff;
     border-radius: 50px;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #00ffff;
 }
 
 .cta-button:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: #00ffff;
+    color: #0a0a1a;
+    box-shadow: 0 0 20px #00ffff;
 }
 
 .about-section, .projects-section, .gallery-section, .testimonials-section, .contact-section {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
 }
 
 .about-content {
@@ -90,23 +120,29 @@ body {
 .about-image img {
     width: 100%;
     border-radius: 10px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(26, 26, 58, 0.5);
     padding: 1.5rem;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
 }
 
 .project-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    border-color: #00ffff;
 }
 
 .gallery-grid {
@@ -118,56 +154,69 @@ body {
 .gallery-item img {
     width: 100%;
     border-radius: 5px;
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
 }
 
 .gallery-item img:hover {
     transform: scale(1.05);
-}
-
-.testimonial-carousel {
-    /* Add carousel styles here */
+    box-shadow: 0 0 15px #ff00ff;
+    border-color: #ff00ff;
 }
 
 .testimonial-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(26, 26, 58, 0.5);
     padding: 1.5rem;
     border-radius: 10px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
+    border: 1px solid rgba(255, 0, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.1);
 }
 
 .contact-form input, .contact-form textarea {
     padding: 1rem;
-    border: none;
+    border: 1px solid rgba(0, 255, 255, 0.3);
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: rgba(10, 10, 26, 0.8);
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 10px #00ffff;
 }
 
 .submit-button {
     padding: 1rem;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(135deg, #ff00cc, #333399);
-    color: #fff;
+    background: linear-gradient(135deg, #00ffff, #ff00ff);
+    color: #0a0a1a;
     cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    box-shadow: 0 0 20px #ff00ff;
 }
 
 .footer {
     padding: 2rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.2);
+    background: #0a0a1a;
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
 }
 
 .social-links a {
-    color: #fff;
+    color: #e0e0e0;
     margin: 0 0.5rem;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
 }
