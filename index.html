@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sci-Fi Portfolio Template</title>
+    <title>SYNAPSE // PORTFOLIO // V3.0</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+
     <nav class="glass-nav">
-        <a href="#" class="logo">PORTFOLIO <span class="glow-effect">//</span></a>
+        <a href="#" class="logo">SYNAPSE <span class="glow-effect">//</span> PORTFOLIO</a>
         <ul>
-            <li><a href="#about" aria-label="About"><i class="fas fa-user-astronaut nav-icon"></i></a></li>
-            <li><a href="#projects" aria-label="Projects"><i class="fas fa-project-diagram nav-icon"></i></a></li>
-            <li><a href="#gallery" aria-label="Gallery"><i class="fas fa-images nav-icon"></i></a></li>
-            <li><a href="#contact" aria-label="Contact"><i class="fas fa-envelope-open-text nav-icon"></i></a></li>
+            <li><a href="#about" aria-label="About"><i class="fas fa-user-astronaut nav-icon"></i> <span class="nav-text">ABOUT</span></a></li>
+            <li><a href="#skills" aria-label="Skills"><i class="fas fa-brain nav-icon"></i> <span class="nav-text">SKILLS</span></a></li>
+            <li><a href="#projects" aria-label="Projects"><i class="fas fa-project-diagram nav-icon"></i> <span class="nav-text">PROJECTS</span></a></li>
+            <li><a href="#gallery" aria-label="Gallery"><i class="fas fa-images nav-icon"></i> <span class="nav-text">GALLERY</span></a></li>
+            <li><a href="#contact" aria-label="Contact"><i class="fas fa-envelope-open-text nav-icon"></i> <span class="nav-text">CONTACT</span></a></li>
         </ul>
     </nav>
 
@@ -26,10 +30,11 @@
             <a href="#projects" class="cta-button">EXPLORE MY DATASTREAM <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="particle-background"></div> <!-- For animated particles -->
+        <div class="hero-overlay-grid"></div> <!-- For subtle grid overlay -->
     </header>
 
     <section id="about" class="about-section scroll-reveal">
-        <h2 class="section-title">_ABOUT ME</h2>
+        <h2 class="section-title">_ABOUT ME <span class="terminal-blink">|</span></h2>
         <div class="about-content glass-card">
             <div class="about-image">
                 <img src="https://via.placeholder.com/400/00ffff/0a0a1a?text=CYBER+PORTRAIT" alt="About Me">
@@ -38,12 +43,71 @@
                 <h3>DIGITAL ALCHEMIST & VISIONARY</h3>
                 <p>I am a passionate creator, weaving stories through pixels and code. My work is a blend of cutting-edge aesthetics, seamless user experiences, and innovative solutions. I strive to engineer digital products that are not only visually stunning but also intuitively interactive and deeply impactful.</p>
                 <p>Specializing in front-end architecture, interactive design, and futuristic UI/UX, I transform complex ideas into accessible and captivating digital realities. Let's build the future, one byte at a time.</p>
+                <a href="#contact" class="cta-button small-cta">INITIATE COMMS <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
+    <section id="skills" class="skills-section scroll-reveal">
+        <h2 class="section-title">_SKILLS MATRIX <span class="terminal-blink">|</span></h2>
+        <div class="skills-grid glass-card">
+            <div class="skill-item">
+                <i class="fab fa-html5 skill-icon"></i>
+                <h3>FRONT-END DEV</h3>
+                <p>HTML5, CSS3, JavaScript (ES6+), React.js, Vue.js, WebGL.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-server skill-icon"></i>
+                <h3>BACK-END DEV</h3>
+                <p>Node.js, Python (Django/Flask), GraphQL, RESTful APIs, Database Management.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-palette skill-icon"></i>
+                <h3>UI/UX DESIGN</h3>
+                <p>Figma, Adobe XD, Wireframing, Prototyping, User Research, Interaction Design.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-cube skill-icon"></i>
+                <h3>3D & ANIMATION</h3>
+                <p>Blender, Three.js, GSAP, Lottie, Particle Systems, Motion Graphics.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-brain skill-icon"></i>
+                <h3>AI/ML INTEGRATION</h3>
+                <p>TensorFlow.js, API Integration, Data Visualization for AI models.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-terminal skill-icon"></i>
+                <h3>DEVOPS & CLOUD</h3>
+                <p>Git, Docker, AWS, Firebase, CI/CD, Serverless Architectures.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="next-gen-skills" class="skills-section scroll-reveal">
+    <h2 class="section-title">_NEXT-GEN SKILLSET<span class="terminal-blink">|</span></h2>
+    <div class="next-gen-skills-container">
+        <div class="skill-category">
+            <h3>Core Technologies</h3>
+            <ul>
+                <li><span>Quantum Computing</span><div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div></li>
+                <li><span>Neuralink Integration</span><div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div></li>
+                <li><span>Cyber-Security</span><div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div></li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Creative Tools</h3>
+            <ul>
+                <li><span>Holographic Design</span><div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div></li>
+                <li><span>VR/AR Environments</span><div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div></li>
+                <li><span>AI-Generated Art</span><div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
     <section id="projects" class="projects-section scroll-reveal">
-        <h2 class="section-title">_PROJECTS SHOWCASE</h2>
+        <h2 class="section-title">_PROJECTS SHOWCASE <span class="terminal-blink">|</span></h2>
         <div class="projects-grid">
             <div class="project-card glass-card">
                 <img src="https://via.placeholder.com/400x250/ff00ff/0a0a1a?text=PROJECT+ALPHA" alt="Project Alpha Image">
@@ -82,24 +146,32 @@
             <h3 id="modal-project-title">Project Title</h3>
             <img id="modal-project-image" src="" alt="Project Image">
             <p id="modal-project-description">Project description goes here.</p>
-            <a id="modal-project-link" href="#" target="_blank" class="cta-button">LIVE DEMO <i class="fas fa-globe"></i></a>
+            <a id="modal-project-link" href="#" target="_blank" class="cta-button small-cta">LIVE DEMO <i class="fas fa-globe"></i></a>
         </div>
     </div>
 
     <section id="gallery" class="gallery-section scroll-reveal">
-        <h2 class="section-title">_GALACTIC VISUALS</h2>
+        <h2 class="section-title">_GALACTIC VISUALS <span class="terminal-blink">|</span></h2>
         <div class="gallery-grid">
-            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/ff00ff/0a0a1a?text=VISION+01" alt="Gallery Image 1"></div>
-            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/00ffff/0a0a1a?text=VISION+02" alt="Gallery Image 2"></div>
-            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/39ff14/0a0a1a?text=VISION+03" alt="Gallery Image 3"></div>
-            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/f0e68c/0a0a1a?text=VISION+04" alt="Gallery Image 4"></div>
-            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/ff69b4/0a0a1a?text=VISION+05" alt="Gallery Image 5"></div>
-            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/8a2be2/0a0a1a?text=VISION+06" alt="Gallery Image 6"></div>
+            <div class="gallery-item glass-card" data-src="https://via.placeholder.com/1200x800/ff00ff/0a0a1a?text=VISION+01"><img src="https://via.placeholder.com/300/ff00ff/0a0a1a?text=VISION+01" alt="Gallery Image 1"></div>
+            <div class="gallery-item glass-card" data-src="https://via.placeholder.com/1200x800/00ffff/0a0a1a?text=VISION+02"><img src="https://via.placeholder.com/300/00ffff/0a0a1a?text=VISION+02" alt="Gallery Image 2"></div>
+            <div class="gallery-item glass-card" data-src="https://via.placeholder.com/1200x800/39ff14/0a0a1a?text=VISION+03"><img src="https://via.placeholder.com/300/39ff14/0a0a1a?text=VISION+03" alt="Gallery Image 3"></div>
+            <div class="gallery-item glass-card" data-src="https://via.placeholder.com/1200x800/f0e68c/0a0a1a?text=VISION+04"><img src="https://via.placeholder.com/300/f0e68c/0a0a1a?text=VISION+04" alt="Gallery Image 4"></div>
+            <div class="gallery-item glass-card" data-src="https://via.placeholder.com/1200x800/ff69b4/0a0a1a?text=VISION+05"><img src="https://via.placeholder.com/300/ff69b4/0a0a1a?text=VISION+05" alt="Gallery Image 5"></div>
+            <div class="gallery-item glass-card" data-src="https://via.placeholder.com/1200x800/8a2be2/0a0a1a?text=VISION+06"><img src="https://via.placeholder.com/300/8a2be2/0a0a1a?text=VISION+06" alt="Gallery Image 6"></div>
         </div>
     </section>
 
+    <!-- Lightbox Modal for Gallery -->
+    <div id="lightbox-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-button">&times;</span>
+            <img id="lightbox-image" src="" alt="Enlarged Gallery Image">
+        </div>
+    </div>
+
     <section id="testimonials" class="testimonials-section scroll-reveal">
-        <h2 class="section-title">_CLIENT LOGS & VALIDATION</h2>
+        <h2 class="section-title">_CLIENT LOGS & VALIDATION <span class="terminal-blink">|</span></h2>
         <div class="testimonial-carousel">
             <div class="testimonial-card glass-card">
                 <div class="star-rating">
@@ -139,7 +211,7 @@
     </section>
 
     <section id="contact" class="contact-section scroll-reveal">
-        <h2 class="section-title">_INITIATE CONTACT PROTOCOL</h2>
+        <h2 class="section-title">_INITIATE CONTACT PROTOCOL <span class="terminal-blink">|</span></h2>
         <form class="contact-form glass-card">
             <input type="text" placeholder="YOUR IDENTIFIER // Name" required>
             <input type="email" placeholder="YOUR COMMS CHANNEL // Email" required>
@@ -156,13 +228,15 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; 2077 <span class="gradient-text">CYBER-CREATIVE</span>. ALL RIGHTS RESERVED // DATA STREAM ID: P0RTF0LI0-V2.0</p>
+        <p>&copy; 2077 <span class="gradient-text">SYNAPSE SYSTEMS</span>. ALL RIGHTS RESERVED // DATA STREAM ID: P0RTF0LI0-V3.0</p>
         <div class="social-links-footer">
             <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
+
+    <a href="#" class="scroll-to-top-btn" aria-label="Scroll to top"><i class="fas fa-angle-double-up"></i></a>
 
     <script src="script.js"></script>
 </body>
