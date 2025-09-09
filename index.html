@@ -3,205 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SYNAPSE // PORTFOLIO // V4.0</title>
+    <title>John Doe // Creative Designer & Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <div class="custom-cursor"></div>
-    <div class="cursor-dot"></div>
-
     <nav class="glass-nav">
-        <a href="#" class="logo">SYNAPSE <span class="glow-effect">//</span> PORTFOLIO</a>
+        <a href="#home" class="logo">JD</a>
         <ul>
-            <li><a href="#about" aria-label="About"><i class="fas fa-user-astronaut nav-icon"></i> <span class="nav-text">ABOUT</span></a></li>
-            <li><a href="#proficiencies" aria-label="Skills"><i class="fas fa-brain nav-icon"></i> <span class="nav-text">SKILLS</span></a></li>
-            <li><a href="#experience" aria-label="Experience"><i class="fas fa-briefcase nav-icon"></i> <span class="nav-text">EXPERIENCE</span></a></li>
-            <li><a href="#the-lab" aria-label="The Lab"><i class="fas fa-flask nav-icon"></i> <span class="nav-text">THE LAB</span></a></li>
-            <li><a href="#projects" aria-label="Projects"><i class="fas fa-project-diagram nav-icon"></i> <span class="nav-text">PROJECTS</span></a></li>
-            <li><a href="#contact" aria-label="Contact"><i class="fas fa-envelope-open-text nav-icon"></i> <span class="nav-text">CONTACT</span></a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="hero-section">
+    <header id="home" class="hero-section">
         <div class="hero-content">
-            <h1 class="gradient-text">ENGINEERING <span class="highlight">FUTURE</span> REALITIES</h1>
-            <p>Pioneering immersive experiences & cutting-edge digital architecture.</p>
-            <a href="#projects" class="cta-button">EXPLORE MY DATASTREAM <i class="fas fa-arrow-right"></i></a>
+            <h1>John Doe</h1>
+            <p>UI/UX Designer & Web Developer</p>
+            <a href="#projects" class="cta-button">View My Work</a>
         </div>
-        <div class="particle-background"></div>
-        <div class="hero-overlay-grid"></div>
     </header>
 
-    <section id="about" class="about-section scroll-reveal">
-        <h2 class="section-title">_ABOUT ME <span class="terminal-blink">|</span></h2>
-        <div class="about-content glass-card">
+    <section id="about" class="about-section">
+        <div class="about-content">
             <div class="about-image">
-                <img src="https://via.placeholder.com/400x400/00ffff/0a0a1a?text=CYBER+PORTRAIT" alt="About Me">
+                <img src="https://via.placeholder.com/300" alt="John Doe">
             </div>
             <div class="about-text">
-                <h3>DIGITAL ALCHEMIST & VISIONARY</h3>
-                <p>I am a passionate creator, weaving stories through pixels and code. My work is a blend of cutting-edge aesthetics, seamless user experiences, and innovative solutions. I strive to engineer digital products that are not only visually stunning but also intuitively interactive and deeply impactful.</p>
-                <p>Specializing in front-end architecture, interactive design, and futuristic UI/UX, I transform complex ideas into accessible and captivating digital realities. Let's build the future, one byte at a time.</p>
-                <a href="#contact" class="cta-button small-cta">INITIATE COMMS <i class="fas fa-arrow-right"></i></a>
+                <h2>About Me</h2>
+                <p>I am a passionate and creative designer and developer with a love for building beautiful, intuitive, and highly functional websites and applications. With a strong foundation in both design principles and modern web technologies, I strive to create engaging digital experiences.</p>
+                <p><strong>Passions:</strong> Minimalist Design, Interactive UI, Mobile-First Development</p>
             </div>
         </div>
     </section>
 
-    <section id="proficiencies" class="skills-section scroll-reveal">
-        <h2 class="section-title">_PROFICIENCIES <span class="terminal-blink">|</span></h2>
-        <div class="skills-grid glass-card">
-            <div class="skill-item">
-                <i class="fab fa-html5 skill-icon"></i>
-                <h3>FRONT-END DEV</h3>
-                <p>HTML5, CSS3, JavaScript (ES6+), React.js, Vue.js, WebGL.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-server skill-icon"></i>
-                <h3>BACK-END DEV</h3>
-                <p>Node.js, Python (Django/Flask), GraphQL, RESTful APIs, Database Management.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-palette skill-icon"></i>
-                <h3>UI/UX DESIGN</h3>
-                <p>Figma, Adobe XD, Wireframing, Prototyping, User Research, Interaction Design.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-cube skill-icon"></i>
-                <h3>3D & ANIMATION</h3>
-                <p>Blender, Three.js, GSAP, Lottie, Particle Systems, Motion Graphics.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-brain skill-icon"></i>
-                <h3>AI/ML INTEGRATION</h3>
-                <p>TensorFlow.js, API Integration, Data Visualization for AI models.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-terminal skill-icon"></i>
-                <h3>DEVOPS & CLOUD</h3>
-                <p>Git, Docker, AWS, Firebase, CI/CD, Serverless Architectures.</p>
-            </div>
+    <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card"> <i class="fab fa-figma"></i> <h3>Figma</h3> </div>
+            <div class="skill-card"> <i class="fab fa-adobe"></i> <h3>Adobe CC</h3> </div>
+            <div class="skill-card"> <i class="fab fa-html5"></i> <h3>HTML5</h3> </div>
+            <div class="skill-card"> <i class="fab fa-css3-alt"></i> <h3>CSS3</h3> </div>
+            <div class="skill-card"> <i class="fab fa-js-square"></i> <h3>JavaScript</h3> </div>
+            <div class="skill-card"> <i class="fab fa-react"></i> <h3>React</h3> </div>
+            <div class="skill-card"> <i class="fas fa-comments"></i> <h3>Communication</h3> </div>
+            <div class="skill-card"> <i class="fas fa-lightbulb"></i> <h3>Problem-solving</h3> </div>
         </div>
     </section>
 
-    <section id="experience" class="experience-section scroll-reveal">
-        <h2 class="section-title">_EXPERIENCE TIMELINE <span class="terminal-blink">|</span></h2>
+    <section id="experience" class="experience-section">
+        <h2>Work Experience</h2>
         <div class="timeline">
-            <div class="timeline-item left">
-                <div class="timeline-content glass-card">
-                    <div class="timeline-date">2025 - Present</div>
-                    <h3>Lead Developer - Future Corp</h3>
-                    <p>Leading the development of next-generation web applications. Responsible for the entire development lifecycle, from concept to deployment. Mentoring a team of junior developers.</p>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Lead Designer - Creative Agency</h3>
+                    <p><strong>2020 - Present</strong></p>
+                    <p>Led design team on major client projects, from concept to final delivery. Mentored junior designers and improved team workflows.</p>
                 </div>
             </div>
-            <div class="timeline-item right">
-                <div class="timeline-content glass-card">
-                    <div class="timeline-date">2022 - 2025</div>
-                    <h3>Senior Software Engineer - Innovate Inc</h3>
-                    <p>Developed and maintained high-traffic web applications. Collaborated with cross-functional teams to deliver high-quality software solutions. Implemented new features and improved existing ones.</p>
-                </div>
-            </div>
-            <div class="timeline-item left">
-                <div class="timeline-content glass-card">
-                    <div class="timeline-date">2020 - 2022</div>
-                    <h3>Frontend Developer - Creative Solutions</h3>
-                    <p>Designed and developed responsive and interactive user interfaces for a variety of clients. Focused on creating engaging and memorable web experiences.</p>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>UI/UX Designer - Tech Solutions Inc.</h3>
+                    <p><strong>2018 - 2020</strong></p>
+                    <p>Designed user interfaces and conducted user research for various web and mobile applications, improving user satisfaction by 25%.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="the-lab" class="lab-section scroll-reveal">
-        <h2 class="section-title">_THE LAB_ // EXPERIMENTS <span class="terminal-blink">|</span></h2>
-        <div class="lab-grid">
-            <div class="lab-item glass-card">
-                <h3>AI Terminal</h3>
-                <div id="terminal" class="terminal">
-                    <div class="terminal-output"></div>
-                    <div class="terminal-input-line"><span class="prompt">></span> <input type="text" class="terminal-input" placeholder="Ask me about my skills..."></div>
-                </div>
-            </div>
-            <div class="lab-item glass-card">
-                <h3>3D Hologram</h3>
-                <div id="hologram-container"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section scroll-reveal">
-        <h2 class="section-title">_PROJECTS SHOWCASE <span class="terminal-blink">|</span></h2>
+    <section id="projects" class="projects-section">
+        <h2>Projects Showcase</h2>
         <div class="projects-grid">
-            <div class="project-card glass-card">
-                <img src="https://via.placeholder.com/400x250/ff00ff/0a0a1a?text=PROJECT+ALPHA" alt="Project Alpha Image">
-                <h3>NEON CITY INTERFACE</h3>
-                <p>A sleek, interactive dashboard concept with real-time data visualization.</p>
-                <button class="project-button" data-project-id="1">VIEW PROJECT <i class="fas fa-external-link-alt"></i></button>
-            </div>
-            <div class="project-card glass-card">
-                <img src="https://via.placeholder.com/400x250/00ffff/0a0a1a?text=PROJECT+BETA" alt="Project Beta Image">
-                <h3>QUANTUM REALITY VR</h3>
-                <p>An immersive virtual reality experience exploring the fabric of space-time.</p>
-                <button class="project-button" data-project-id="2">VIEW PROJECT <i class="fas fa-external-link-alt"></i></button>
-            </div>
-            <div class="project-card glass-card">
-                <img src="https://via.placeholder.com/400x250/39ff14/0a0a1a?text=PROJECT+GAMMA" alt="Project Gamma Image">
-                <h3>AI SENTINEL NETWORK</h3>
-                <p>A secure, intelligent network monitoring system with predictive analytics.</p>
-                <button class="project-button" data-project-id="3">VIEW PROJECT <i class="fas fa-external-link-alt"></i></button>
-            </div>
-            <div class="project-card glass-card">
-                <img src="https://via.placeholder.com/400x250/f0e68c/0a0a1a?text=PROJECT+DELTA" alt="Project Delta Image">
-                <h3>CYBERNETIC CHRONICLES</h3>
-                <p>An interactive narrative experience set in a dystopian future.</p>
-                <button class="project-button" data-project-id="4">VIEW PROJECT <i class="fas fa-external-link-alt"></i></button>
-            </div>
+            <!-- Project cards will be added here -->
         </div>
-        <div class="explore-more-container">
-            <a href="#" class="cta-button explore-more-button">VIEW ALL PROJECTS <i class="fas fa-chevron-right"></i></a>
+        <a href="#" class="cta-button">View More</a>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2>Services I Offer</h2>
+        <div class="services-grid">
+             <!-- Services cards will be added here -->
         </div>
     </section>
 
-    <!-- Project Modal Structure -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content glass-card">
-            <span class="close-button">&times;</span>
-            <h3 id="modal-project-title">Project Title</h3>
-            <img id="modal-project-image" src="" alt="Project Image">
-            <p id="modal-project-description">Project description goes here.</p>
-            <a id="modal-project-link" href="#" target="_blank" class="cta-button small-cta">LIVE DEMO <i class="fas fa-globe"></i></a>
+    <section id="gallery" class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="photo-grid">
+            <!-- Gallery images will be added here -->
         </div>
-    </div>
+    </section>
 
-    <section id="contact" class="contact-section scroll-reveal">
-        <h2 class="section-title">_INITIATE CONTACT PROTOCOL <span class="terminal-blink">|</span></h2>
-        <form class="contact-form glass-card">
-            <input type="text" placeholder="YOUR IDENTIFIER // Name" required>
-            <input type="email" placeholder="YOUR COMMS CHANNEL // Email" required>
-            <input type="text" placeholder="SUBJECT LINE // Inquiry Type">
-            <textarea placeholder="TRANSMIT MESSAGE // Your Message" rows="6" required></textarea>
-            <button type="submit" class="submit-button">SEND DATA PACKET <i class="fas fa-paper-plane"></i></button>
+    <section id="testimonials" class="testimonials-section">
+        <h2>What Clients Say</h2>
+        <div class="testimonial-slider">
+            <!-- Testimonial cards will be added here -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
         </form>
-        <div class="social-links-contact">
-            <a href="#" aria-label="Github"><i class="fab fa-github social-icon glow-effect"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin social-icon glow-effect"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter social-icon glow-effect"></i></a>
-            <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble social-icon glow-effect"></i></a>
+        <div class="social-media-icons">
+             <a href="#"><i class="fab fa-github"></i></a>
+             <a href="#"><i class="fab fa-linkedin"></i></a>
+             <a href="#"><i class="fab fa-dribbble"></i></a>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2077 <span class="gradient-text">SYNAPSE SYSTEMS</span>. ALL RIGHTS RESERVED // DATA STREAM ID: P0RTF0LI0-V4.0</p>
-        <div class="social-links-footer">
-            <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <p>&copy; 2024 John Doe. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
         </div>
     </footer>
 
-    <a href="#" class="scroll-to-top-btn" aria-label="Scroll to top"><i class="fas fa-angle-double-up"></i></a>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
