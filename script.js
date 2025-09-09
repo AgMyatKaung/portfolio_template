@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Smooth scrolling for navigation links
+    // Preloader
+    const preloader = document.querySelector('.preloader');
+    window.addEventListener('load', () => {
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    });
+
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
         });
     });
 
@@ -30,6 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
             }
         });
+    });
+
+    // Mobile navigation
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.glass-nav ul');
+    hamburger.addEventListener('click', () => {
+        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
     });
 
     // Hero section typing effect
@@ -64,6 +76,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     type();
 
+    // Project filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.dataset.category.includes(filter)) {
+                    card.classList.remove('hide');
+                } else {
+                    card.classList.add('hide');
+                }
+            });
+        });
+    });
+
     // Gallery Lightbox
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -82,21 +115,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Testimonial Slider
+    const slider = document.querySelector('.testimonial-slider');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
     const testimonials = document.querySelectorAll('.testimonial-card');
-    let currentTestimonial = 0;
+    let currentIndex = 0;
 
-    function showTestimonial(index) {
-        testimonials.forEach((testimonial, i) => {
-            testimonial.classList.remove('active');
-            if (i === index) {
-                testimonial.classList.add('active');
-            }
-        });
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        testimonials.forEach((t, i) => t.classList.toggle('active', i === currentIndex));
     }
 
-    setInterval(() => {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-    }, 5000); // Change every 5 seconds
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+        updateSlider();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        updateSlider();
+    });
+
+    // Lazy loading images
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    const imgObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('loading');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    lazyImages.forEach(img => {
+        imgObserver.observe(img);
+    });
 
 });
