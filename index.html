@@ -3,106 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Portfolio Template</title>
+    <title>Sci-Fi Portfolio Template</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <nav class="glass-nav">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#" class="logo">PORTFOLIO <span class="glow-effect">//</span></a>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" aria-label="About"><i class="fas fa-user-astronaut nav-icon"></i></a></li>
+            <li><a href="#projects" aria-label="Projects"><i class="fas fa-project-diagram nav-icon"></i></a></li>
+            <li><a href="#gallery" aria-label="Gallery"><i class="fas fa-images nav-icon"></i></a></li>
+            <li><a href="#contact" aria-label="Contact"><i class="fas fa-envelope-open-text nav-icon"></i></a></li>
         </ul>
     </nav>
 
     <header class="hero-section">
-        <div id="particles-js"></div>
         <div class="hero-content">
-            <h1 class="gradient-text">Creative & Modern</h1>
-            <p>A premium template for showcasing your work.</p>
-            <a href="#" class="cta-button">Explore More</a>
+            <h1 class="gradient-text">ENGINEERING <span class="highlight">FUTURE</span> REALITIES</h1>
+            <p>Pioneering immersive experiences & cutting-edge digital architecture.</p>
+            <a href="#projects" class="cta-button">EXPLORE MY DATASTREAM <i class="fas fa-arrow-right"></i></a>
         </div>
+        <div class="particle-background"></div> <!-- For animated particles -->
     </header>
 
-    <section id="about" class="about-section">
-        <div class="about-content">
+    <section id="about" class="about-section scroll-reveal">
+        <h2 class="section-title">_ABOUT ME</h2>
+        <div class="about-content glass-card">
             <div class="about-image">
-                <img src="https://via.placeholder.com/400" alt="About Me">
+                <img src="https://via.placeholder.com/400/00ffff/0a0a1a?text=CYBER+PORTRAIT" alt="About Me">
             </div>
             <div class="about-text">
-                <h2>About Me</h2>
-                <p>I am a passionate creator, weaving stories through pixels and code. My work is a blend of modern aesthetics and seamless user experiences. I strive to create digital products that are not only visually stunning but also intuitive and accessible.</p>
+                <h3>DIGITAL ALCHEMIST & VISIONARY</h3>
+                <p>I am a passionate creator, weaving stories through pixels and code. My work is a blend of cutting-edge aesthetics, seamless user experiences, and innovative solutions. I strive to engineer digital products that are not only visually stunning but also intuitively interactive and deeply impactful.</p>
+                <p>Specializing in front-end architecture, interactive design, and futuristic UI/UX, I transform complex ideas into accessible and captivating digital realities. Let's build the future, one byte at a time.</p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
+    <section id="projects" class="projects-section scroll-reveal">
+        <h2 class="section-title">_PROJECTS SHOWCASE</h2>
         <div class="projects-grid">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>A brief description of the project.</p>
-                <button class="project-button">View Details</button>
+            <div class="project-card glass-card">
+                <img src="https://via.placeholder.com/400x250/ff00ff/0a0a1a?text=PROJECT+ALPHA" alt="Project Alpha Image">
+                <h3>NEON CITY INTERFACE</h3>
+                <p>A sleek, interactive dashboard concept with real-time data visualization.</p>
+                <button class="project-button" data-project-id="1">VIEW PROJECT <i class="fas fa-external-link-alt"></i></button>
             </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>A brief description of the project.</p>
-                <button class="project-button">View Details</button>
+            <div class="project-card glass-card">
+                <img src="https://via.placeholder.com/400x250/00ffff/0a0a1a?text=PROJECT+BETA" alt="Project Beta Image">
+                <h3>QUANTUM REALITY VR</h3>
+                <p>An immersive virtual reality experience exploring the fabric of space-time.</p>
+                <button class="project-button" data-project-id="2">VIEW PROJECT <i class="fas fa-external-link-alt"></i></button>
             </div>
-            <div class="project-card">
-                <h3>Project Three</h3>
-                <p>A brief description of the project.</p>
-                <button class="project-button">View Details</button>
+            <div class="project-card glass-card">
+                <img src="https://via.placeholder.com/400x250/39ff14/0a0a1a?text=PROJECT+GAMMA" alt="Project Gamma Image">
+                <h3>AI SENTINEL NETWORK</h3>
+                <p>A secure, intelligent network monitoring system with predictive analytics.</p>
+                <button class="project-button" data-project-id="3">VIEW PROJECT <i class="fas fa-external-link-alt"></i></button>
             </div>
+            <div class="project-card glass-card">
+                <img src="https://via.placeholder.com/400x250/f0e68c/0a0a1a?text=PROJECT+DELTA" alt="Project Delta Image">
+                <h3>CYBERNETIC CHRONICLES</h3>
+                <p>An interactive narrative experience set in a dystopian future.</p>
+                <button class="project-button" data-project-id="4">VIEW PROJECT <i class="fas fa-external-link-alt"></i></button>
+            </div>
+        </div>
+        <div class="explore-more-container">
+            <a href="#" class="cta-button explore-more-button">VIEW ALL PROJECTS <i class="fas fa-chevron-right"></i></a>
         </div>
     </section>
 
-    <section id="gallery" class="gallery-section">
-        <h2>Gallery</h2>
+    <!-- Project Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-project-title">Project Title</h3>
+            <img id="modal-project-image" src="" alt="Project Image">
+            <p id="modal-project-description">Project description goes here.</p>
+            <a id="modal-project-link" href="#" target="_blank" class="cta-button">LIVE DEMO <i class="fas fa-globe"></i></a>
+        </div>
+    </div>
+
+    <section id="gallery" class="gallery-section scroll-reveal">
+        <h2 class="section-title">_GALACTIC VISUALS</h2>
         <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Gallery Image"></div>
-            <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Gallery Image"></div>
-            <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Gallery Image"></div>
-            <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Gallery Image"></div>
+            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/ff00ff/0a0a1a?text=VISION+01" alt="Gallery Image 1"></div>
+            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/00ffff/0a0a1a?text=VISION+02" alt="Gallery Image 2"></div>
+            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/39ff14/0a0a1a?text=VISION+03" alt="Gallery Image 3"></div>
+            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/f0e68c/0a0a1a?text=VISION+04" alt="Gallery Image 4"></div>
+            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/ff69b4/0a0a1a?text=VISION+05" alt="Gallery Image 5"></div>
+            <div class="gallery-item glass-card"><img src="https://via.placeholder.com/300/8a2be2/0a0a1a?text=VISION+06" alt="Gallery Image 6"></div>
         </div>
     </section>
 
-    <section id="testimonials" class="testimonials-section">
-        <h2>Client Feedback</h2>
+    <section id="testimonials" class="testimonials-section scroll-reveal">
+        <h2 class="section-title">_CLIENT LOGS & VALIDATION</h2>
         <div class="testimonial-carousel">
-            <div class="testimonial-card">
-                <p>"An amazing and creative professional. Delivered beyond expectations!"</p>
+            <div class="testimonial-card glass-card">
+                <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"An exceptional digital architect! Transformed our outdated system into a futuristic, highly intuitive platform. A true visionary in the cyber domain."</p>
                 <div class="testimonial-author">
-                    <img src="https://via.placeholder.com/50" alt="Author">
-                    <span>- Jane Doe</span>
+                    <img src="https://via.placeholder.com/50/00ffff/0a0a1a?text=CL" alt="Client Logo 1">
+                    <span>- CYBERNETIX CORP. // CEO</span>
+                </div>
+            </div>
+            <div class="testimonial-card glass-card">
+                <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"Their work on our VR project was groundbreaking. The attention to detail and innovative approach made all the difference. Highly recommend for any advanced digital solutions!"</p>
+                <div class="testimonial-author">
+                    <img src="https://via.placeholder.com/50/ff00ff/0a0a1a?text=GD" alt="Client Logo 2">
+                    <span>- GALACTIC DYNAMICS // Lead Engineer</span>
+                </div>
+            </div>
+            <div class="testimonial-card glass-card">
+                <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"Seamless integration and a truly captivating UI. This template is a game-changer for any creative looking to make a serious impact."</p>
+                <div class="testimonial-author">
+                    <img src="https://via.placeholder.com/50/39ff14/0a0a1a?text=SN" alt="Client Logo 3">
+                    <span>- SYNAPSE NETWORKS // Founder</span>
                 </div>
             </div>
         </div>
+        <div class="carousel-nav">
+            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit" class="submit-button">Send Message</button>
+    <section id="contact" class="contact-section scroll-reveal">
+        <h2 class="section-title">_INITIATE CONTACT PROTOCOL</h2>
+        <form class="contact-form glass-card">
+            <input type="text" placeholder="YOUR IDENTIFIER // Name" required>
+            <input type="email" placeholder="YOUR COMMS CHANNEL // Email" required>
+            <input type="text" placeholder="SUBJECT LINE // Inquiry Type">
+            <textarea placeholder="TRANSMIT MESSAGE // Your Message" rows="6" required></textarea>
+            <button type="submit" class="submit-button">SEND DATA PACKET <i class="fas fa-paper-plane"></i></button>
         </form>
+        <div class="social-links-contact">
+            <a href="#" aria-label="Github"><i class="fab fa-github social-icon glow-effect"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin social-icon glow-effect"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter social-icon glow-effect"></i></a>
+            <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble social-icon glow-effect"></i></a>
+        </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2024 Premium Portfolio. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="#">FB</a>
-            <a href="#">TW</a>
-            <a href="#">IN</a>
+        <p>&copy; 2077 <span class="gradient-text">CYBER-CREATIVE</span>. ALL RIGHTS RESERVED // DATA STREAM ID: P0RTF0LI0-V2.0</p>
+        <div class="social-links-footer">
+            <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
