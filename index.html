@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The portfolio of John Doe, a creative UI/UX Designer and Web Developer specializing in modern, intuitive, and performant web experiences.">
+    <meta name="author" content="John Doe">
     <title>John Doe // Creative Designer & Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
 
     <nav class="glass-nav">
         <a href="#home" class="logo">JD</a>
@@ -20,6 +26,9 @@
             <li><a href="#services" class="nav-link">Services</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <header id="home" class="hero-section">
@@ -30,170 +39,210 @@
         </div>
     </header>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://i.pravatar.cc/300?img=12" alt="John Doe">
-                </div>
-                <div class="about-text">
-                    <p>I am a passionate and creative designer and developer with a love for building beautiful, intuitive, and highly functional websites and applications. With a strong foundation in both design principles and modern web technologies, I strive to create engaging digital experiences.</p>
-                    <p><strong>Passions:</strong> Minimalist Design, Interactive UI, Mobile-First Development</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card"> <i class="fab fa-figma"></i> <h3>Figma</h3> <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div> </div>
-                <div class="skill-card"> <i class="fab fa-adobe"></i> <h3>Adobe CC</h3> <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div> </div>
-                <div class="skill-card"> <i class="fab fa-html5"></i> <h3>HTML5</h3> <div class="progress-bar"><div class="progress" style="width: 98%;"></div></div> </div>
-                <div class="skill-card"> <i class="fab fa-css3-alt"></i> <h3>CSS3</h3> <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div> </div>
-                <div class="skill-card"> <i class="fab fa-js-square"></i> <h3>JavaScript</h3> <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div> </div>
-                <div class="skill-card"> <i class="fab fa-react"></i> <h3>React</h3> <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div> </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <h2>Work Experience</h2>
-            <div class="timeline">
-                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Lead Designer - Creative Agency</h3>
-                        <p><strong>2020 - Present</strong></p>
-                        <ul>
-                           <li>Led design team on major client projects, from concept to final delivery.</li>
-                           <li>Mentored junior designers and improved team workflows.</li>
-                        </ul>
+    <main>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://i.pravatar.cc/300?img=12" alt="A portrait of John Doe" loading="lazy">
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>UI/UX Designer - Tech Solutions Inc.</h3>
-                        <p><strong>2018 - 2020</strong></p>
-                        <ul>
-                           <li>Designed user interfaces and conducted user research for various web and mobile applications.</li>
-                           <li>Improved user satisfaction by 25% through iterative design processes.</li>
-                        </ul>
+                    <div class="about-text">
+                        <p>I am a passionate and creative designer and developer with a love for building beautiful, intuitive, and highly functional websites and applications. With a strong foundation in both design principles and modern web technologies, I strive to create engaging digital experiences that not only look good but also perform flawlessly.</p>
+                        <p><strong>Passions:</strong> Minimalist Design, Interactive UI, Mobile-First Development, and pushing the boundaries of front-end technology.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2>Projects Showcase</h2>
-            <div class="projects-grid">
-                <div class="project-card" data-category="ui/ux">
-                    <img src="https://via.placeholder.com/400x300/a770ef/ffffff?text=Project+One" alt="Project One">
-                    <div class="project-info">
-                        <h3>Corporate Website Redesign</h3>
-                        <p>UI/UX, Web Design</p>
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card"> <i class="fab fa-figma"></i> <h3>Figma</h3> <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div> </div>
+                    <div class="skill-card"> <i class="fab fa-adobe"></i> <h3>Adobe CC</h3> <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div> </div>
+                    <div class="skill-card"> <i class="fab fa-html5"></i> <h3>HTML5</h3> <div class="progress-bar"><div class="progress" style="width: 98%;"></div></div> </div>
+                    <div class="skill-card"> <i class="fab fa-css3-alt"></i> <h3>CSS3</h3> <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div> </div>
+                    <div class="skill-card"> <i class="fab fa-js-square"></i> <h3>JavaScript</h3> <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div> </div>
+                    <div class="skill-card"> <i class="fab fa-react"></i> <h3>React</h3> <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div> </div>
+                    <div class="skill-card"> <i class="fab fa-node-js"></i> <h3>Node.js</h3> <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div> </div>
+                    <div class="skill-card"> <i class="fas fa-database"></i> <h3>SQL</h3> <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div> </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="timeline">
+                     <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Lead Designer - Creative Agency</h3>
+                            <p><strong>2020 - Present</strong></p>
+                            <ul>
+                               <li>Led design team on major client projects, from concept to final delivery, increasing client satisfaction by 30%.</li>
+                               <li>Mentored junior designers and improved team workflows, boosting team productivity by 15%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>UI/UX Designer - Tech Solutions Inc.</h3>
+                            <p><strong>2018 - 2020</strong></p>
+                            <ul>
+                               <li>Designed user interfaces and conducted user research for various web and mobile applications.</li>
+                               <li>Improved user satisfaction by 25% through iterative design processes and user testing.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Web Developer - Freelance</h3>
+                            <p><strong>2016 - 2018</strong></p>
+                            <ul>
+                               <li>Developed and maintained websites for small businesses, focusing on responsive design and performance.</li>
+                               <li>Managed client communication, project timelines, and deliverables.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="branding">
-                    <img src="https://via.placeholder.com/400x300/cf6780/ffffff?text=Project+Two" alt="Project Two">
-                    <div class="project-info">
-                        <h3>E-commerce Branding</h3>
-                        <p>Branding, Web Design</p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>Projects Showcase</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
+                    <button class="filter-btn" data-filter="web-design">Web Design</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="ui-ux">
+                        <img src="https://via.placeholder.com/400x300/a770ef/ffffff?text=Project+One" alt="A preview of the corporate website redesign project." loading="lazy">
+                        <div class="project-info">
+                            <h3>Corporate Website Redesign</h3>
+                            <p>UI/UX, Web Design</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="branding">
+                        <img src="https://via.placeholder.com/400x300/cf6780/ffffff?text=Project+Two" alt="A preview of the e-commerce branding project." loading="lazy">
+                        <div class="project-info">
+                            <h3>E-commerce Branding</h3>
+                            <p>Branding, Web Design</p>
+                        </div>
+                    </div>
+                     <div class="project-card" data-category="web-design">
+                        <img src="https://via.placeholder.com/400x300/a770ef/ffffff?text=Project+Three" alt="A preview of the mobile app UI project." loading="lazy">
+                        <div class="project-info">
+                            <h3>Mobile App UI</h3>
+                            <p>UI/UX, Mobile</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web-design">
+                        <img src="https://via.placeholder.com/400x300/cf6780/ffffff?text=Project+Four" alt="A preview of the SaaS dashboard project." loading="lazy">
+                        <div class="project-info">
+                            <h3>SaaS Dashboard</h3>
+                            <p>Web Design, UI/UX</p>
+                        </div>
                     </div>
                 </div>
-                 <div class="project-card" data-category="web-design">
-                    <img src="https://via.placeholder.com/400x300/a770ef/ffffff?text=Project+Three" alt="Project Three">
-                    <div class="project-info">
-                        <h3>Mobile App UI</h3>
-                        <p>UI/UX, Mobile</p>
+                 <a href="#" class="cta-button" style="margin-top: 2rem;">View More</a>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Services I Offer</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Crafting intuitive, beautiful, and user-centric interfaces that are both easy and enjoyable to use.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Building responsive, high-performance, and scalable websites from the ground up using modern technologies.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Branding</h3>
+                        <p>Creating strong, memorable, and consistent brand identities that resonate with the target audience.</p>
                     </div>
                 </div>
             </div>
-             <a href="#" class="cta-button" style="margin-top: 2rem;">View More</a>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2>Services I Offer</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-pencil-ruler"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Crafting intuitive and beautiful user interfaces.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Building responsive and high-performance websites.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-bullhorn"></i>
-                    <h3>Branding</h3>
-                    <p>Creating strong and memorable brand identities.</p>
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="photo-grid">
+                    <div class="photo-item"><img src="https://via.placeholder.com/400/a770ef/ffffff?text=Gallery+1" alt="A gallery image showcasing a design detail." loading="lazy"></div>
+                    <div class="photo-item"><img src="https://via.placeholder.com/400/cf6780/ffffff?text=Gallery+2" alt="A gallery image showcasing another design project." loading="lazy"></div>
+                    <div class="photo-item"><img src="https://via.placeholder.com/400/a770ef/ffffff?text=Gallery+3" alt="A gallery image of a branding concept." loading="lazy"></div>
+                    <div class="photo-item"><img src="https://via.placeholder.com/400/cf6780/ffffff?text=Gallery+4" alt="A gallery image of a web app interface." loading="lazy"></div>
                 </div>
             </div>
+        </section>
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" alt="Enlarged gallery image.">
         </div>
-    </section>
 
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <h2>Gallery</h2>
-            <div class="photo-grid">
-                <div class="photo-item"><img src="https://via.placeholder.com/400/a770ef/ffffff?text=Gallery+1" alt="Gallery Image 1"></div>
-                <div class="photo-item"><img src="https://via.placeholder.com/400/cf6780/ffffff?text=Gallery+2" alt="Gallery Image 2"></div>
-                <div class="photo-item"><img src="https://via.placeholder.com/400/a770ef/ffffff?text=Gallery+3" alt="Gallery Image 3"></div>
-                <div class="photo-item"><img src="https://via.placeholder.com/400/cf6780/ffffff?text=Gallery+4" alt="Gallery Image 4"></div>
-            </div>
-        </div>
-    </section>
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
-
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2>What Clients Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial-card active">
-                    <img src="https://i.pravatar.cc/100?img=3" alt="Client 1">
-                    <p>"John's work exceeded all expectations. The design was stunning and the final product was delivered on time."
-                    </p>
-                    <h4>- Jane Smith, CEO of Innovate Inc.</h4>
-                    <div class="stars">★★★★☆</div>
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2>What Clients Say</h2>
+                <div class="testimonial-slider-container">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-card active">
+                            <img src="https://i.pravatar.cc/100?img=3" alt="A portrait of Jane Smith." loading="lazy">
+                            <p>"John's work exceeded all expectations. The design was stunning and the final product was delivered on time."
+                            </p>
+                            <h4>- Jane Smith, CEO of Innovate Inc.</h4>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                         <div class="testimonial-card">
+                            <img src="https://i.pravatar.cc/100?img=4" alt="A portrait of Mark Johnson." loading="lazy">
+                            <p>"A true professional. John is a great communicator and a talented developer who delivers exceptional results."
+                            </p>
+                            <h4>- Mark Johnson, Founder of TechStart</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div class="testimonial-card">
+                            <img src="https://i.pravatar.cc/100?img=5" alt="A portrait of Sarah Lee." loading="lazy">
+                            <p>"Working with John was a fantastic experience. He is creative, responsive, and truly understands user needs."
+                            </p>
+                            <h4>- Sarah Lee, Project Manager</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button class="prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                 </div>
-                 <div class="testimonial-card">
-                    <img src="https://i.pravatar.cc/100?img=4" alt="Client 2">
-                    <p>"A true professional. John is a great communicator and a talented developer."
-                    </p>
-                    <h4>- Mark Johnson, Founder of TechStart</h4>
-                    <div class="stars">★★★★★</div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <form class="contact-form" action="#" method="post">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+                <div class="social-media-icons">
+                     <a href="#" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                     <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                     <a href="#" aria-label="Dribbble profile"><i class="fab fa-dribbble"></i></a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
-            <div class="social-media-icons">
-                 <a href="#"><i class="fab fa-github"></i></a>
-                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                 <a href="#"><i class="fab fa-dribbble"></i></a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -205,6 +254,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
