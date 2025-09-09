@@ -18,7 +18,7 @@
             <li><a href="#about" aria-label="About"><i class="fas fa-user-astronaut nav-icon"></i> <span class="nav-text">ABOUT</span></a></li>
             <li><a href="#proficiencies" aria-label="Skills"><i class="fas fa-brain nav-icon"></i> <span class="nav-text">SKILLS</span></a></li>
             <li><a href="#experience" aria-label="Experience"><i class="fas fa-briefcase nav-icon"></i> <span class="nav-text">EXPERIENCE</span></a></li>
-            <li><a href="#vision-mission" aria-label="Vision & Mission"><i class="fas fa-bullseye nav-icon"></i> <span class="nav-text">VISION</span></a></li>
+            <li><a href="#the-lab" aria-label="The Lab"><i class="fas fa-flask nav-icon"></i> <span class="nav-text">THE LAB</span></a></li>
             <li><a href="#projects" aria-label="Projects"><i class="fas fa-project-diagram nav-icon"></i> <span class="nav-text">PROJECTS</span></a></li>
             <li><a href="#contact" aria-label="Contact"><i class="fas fa-envelope-open-text nav-icon"></i> <span class="nav-text">CONTACT</span></a></li>
         </ul>
@@ -86,49 +86,45 @@
     </section>
 
     <section id="experience" class="experience-section scroll-reveal">
-        <h2 class="section-title">_EXPERIENCE <span class="terminal-blink">|</span></h2>
-        <div class="experience-content glass-card">
-            <div class="experience-item">
-                <div class="experience-image">
-                    <img src="https://via.placeholder.com/400x300/ff00ff/0a0a1a?text=FUTURE+CORP" alt="Future Corp">
-                </div>
-                <div class="experience-text">
-                    <h3>Lead Developer - Future Corp (2025-Present)</h3>
+        <h2 class="section-title">_EXPERIENCE TIMELINE <span class="terminal-blink">|</span></h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content glass-card">
+                    <div class="timeline-date">2025 - Present</div>
+                    <h3>Lead Developer - Future Corp</h3>
                     <p>Leading the development of next-generation web applications. Responsible for the entire development lifecycle, from concept to deployment. Mentoring a team of junior developers.</p>
                 </div>
             </div>
-            <div class="experience-item">
-                <div class="experience-image">
-                    <img src="https://via.placeholder.com/400x300/00ffff/0a0a1a?text=INNOVATE+INC" alt="Innovate Inc">
-                </div>
-                <div class="experience-text">
-                    <h3>Senior Software Engineer - Innovate Inc (2022-2025)</h3>
+            <div class="timeline-item right">
+                <div class="timeline-content glass-card">
+                    <div class="timeline-date">2022 - 2025</div>
+                    <h3>Senior Software Engineer - Innovate Inc</h3>
                     <p>Developed and maintained high-traffic web applications. Collaborated with cross-functional teams to deliver high-quality software solutions. Implemented new features and improved existing ones.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content glass-card">
+                    <div class="timeline-date">2020 - 2022</div>
+                    <h3>Frontend Developer - Creative Solutions</h3>
+                    <p>Designed and developed responsive and interactive user interfaces for a variety of clients. Focused on creating engaging and memorable web experiences.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="vision-mission" class="vision-mission-section scroll-reveal">
-        <h2 class="section-title">_VISION & MISSION <span class="terminal-blink">|</span></h2>
-        <div class="vision-mission-content glass-card">
-            <div class="vision-mission-item">
-                <div class="vision-mission-image">
-                    <img src="https://via.placeholder.com/400x300/39ff14/0a0a1a?text=OUR+VISION" alt="Our Vision">
-                </div>
-                <div class="vision-mission-text">
-                    <h3>Our Vision</h3>
-                    <p>To be at the forefront of digital innovation, creating a future where technology and creativity converge to solve the most complex challenges and enhance human potential.</p>
+    <section id="the-lab" class="lab-section scroll-reveal">
+        <h2 class="section-title">_THE LAB_ // EXPERIMENTS <span class="terminal-blink">|</span></h2>
+        <div class="lab-grid">
+            <div class="lab-item glass-card">
+                <h3>AI Terminal</h3>
+                <div id="terminal" class="terminal">
+                    <div class="terminal-output"></div>
+                    <div class="terminal-input-line"><span class="prompt">></span> <input type="text" class="terminal-input" placeholder="Ask me about my skills..."></div>
                 </div>
             </div>
-            <div class="vision-mission-item">
-                <div class="vision-mission-image">
-                    <img src="https://via.placeholder.com/400x300/f0e68c/0a0a1a?text=OUR+MISSION" alt="Our Mission">
-                </div>
-                <div class="vision-mission-text">
-                    <h3>Our Mission</h3>
-                    <p>To craft exceptional digital experiences that are not only aesthetically pleasing but also intuitive, accessible, and impactful. We are committed to pushing the boundaries of technology and design.</p>
-                </div>
+            <div class="lab-item glass-card">
+                <h3>3D Hologram</h3>
+                <div id="hologram-container"></div>
             </div>
         </div>
     </section>
@@ -205,6 +201,7 @@
 
     <a href="#" class="scroll-to-top-btn" aria-label="Scroll to top"><i class="fas fa-angle-double-up"></i></a>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
