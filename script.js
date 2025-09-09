@@ -6,43 +6,97 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            if(targetElement) {
+            if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
 
-    // Hide navbar on scroll down, show on scroll up
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.glass-nav');
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            navbar.style.top = '-80px'; // Hides navbar
-        } else {
-            navbar.style.top = '0'; // Shows navbar
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
-    });
-
-
-    // Scroll reveal animations for sections
+    // Active nav link on scroll
+    const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 60) {
+                current = section.getAttribute('id');
             }
         });
-    }, { threshold: 0.1 });
 
-    sections.forEach(section => {
-        section.style.opacity = 0;
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        sectionObserver.observe(section);
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
     });
+
+    // Hero section typing effect
+    const tagline = document.querySelector('.tagline');
+    const phrases = ["UI/UX Designer", "Web Developer", "Creative Artist"];
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let currentPhrase = "";
+
+    function type() {
+        if (letterIndex < phrases[phraseIndex].length) {
+            currentPhrase += phrases[phraseIndex].charAt(letterIndex);
+            tagline.textContent = currentPhrase;
+            letterIndex++;
+            setTimeout(type, 100);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
+
+    function erase() {
+        if (letterIndex > 0) {
+            currentPhrase = currentPhrase.substring(0, currentPhrase.length - 1);
+            tagline.textContent = currentPhrase;
+            letterIndex--;
+            setTimeout(erase, 50);
+        } else {
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(type, 500);
+        }
+    }
+
+    type();
+
+    // Gallery Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const photoItems = document.querySelectorAll('.photo-item img');
+    const closeLightbox = document.querySelector('.lightbox-close');
+
+    photoItems.forEach(item => {
+        item.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = item.src;
+        });
+    });
+
+    closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Testimonial Slider
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    let currentTestimonial = 0;
+
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.classList.remove('active');
+            if (i === index) {
+                testimonial.classList.add('active');
+            }
+        });
+    }
+
+    setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }, 5000); // Change every 5 seconds
 
 });
